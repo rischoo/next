@@ -1,6 +1,7 @@
 import Container from '@components/organisms/Container'
 import type { Metadata, Viewport } from 'next'
 import { DM_Sans } from 'next/font/google'
+import '../assets/styles/global.css'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -27,8 +28,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { readonly children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={dmSans.className}>
+    <html lang="en" className='h-full bg-white'>
+      <body className={`${dmSans.className} h-full`}>
         <Container>{children}</Container>
       </body>
     </html>
